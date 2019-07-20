@@ -14,7 +14,9 @@ class ThemeApp extends StatelessWidget {
       builder: (_) {
         var themeData = ThemeData(
           brightness: settings.useDarkMode == true ? Brightness.dark : Brightness.light,
-          primaryColor: Color(0xffffb700),
+          primaryColor: Colors.white,
+          accentColor: Colors.white,
+          hintColor: Colors.white
         );
         return MaterialApp(
           title: 'Mandiri App',

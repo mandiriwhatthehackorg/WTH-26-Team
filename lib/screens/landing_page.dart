@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mandiri_wth/screens/biodata_oob_page.dart';
 import 'package:mandiri_wth/screens/login_page.dart';
-import 'package:mandiri_wth/screens/register_page.dart';
-import 'package:mandiri_wth/utils/fade_transition.dart';
 import 'package:mandiri_wth/utils/size_config.dart';
 
 class LandingPage extends StatefulWidget {
@@ -70,11 +67,7 @@ class _LandingPageState extends State<LandingPage> {
                           borderRadius: BorderRadius.circular(24),
                         ),
                         color: Colors.white,
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => BiodataOobPage()),
-                          );
-                        },
+                        onPressed: () {},
                         child: Container(
                           child: Text(
                             'REGISTER',
@@ -102,7 +95,7 @@ class _LandingPageState extends State<LandingPage> {
                       'I ALREADY HAVE AN ACCOUNT',
                       style: TextStyle(
                           color: Color(0xff003d79),
-                          fontSize: SizeConfig.blockSizeVertical * 2.5,
+                          fontSize: SizeConfig.blockSizeVertical * 1.7,
                           fontWeight: FontWeight.bold),
                     ),
                   ),

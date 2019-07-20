@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mandiri_wth/data/api_servicing.dart';
-import 'package:mandiri_wth/screens/camera_page.dart';
 import 'package:mandiri_wth/services/preferences_service.dart';
 import 'package:mandiri_wth/stores/customer.dart';
 import 'package:mandiri_wth/stores/settings.dart';
@@ -13,8 +12,6 @@ Future main() async {
   _setupLogging();
   var sharedPreferences = await SharedPreferences.getInstance();
   runApp(MyApp(PreferencesService(sharedPreferences)));
-//  runApp(StepperApp());
-//  runApp(CameraApp());
 }
 
 void _setupLogging() {

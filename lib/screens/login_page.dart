@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mandiri_wth/screens/dashboard.dart';
-import 'package:mandiri_wth/screens/otp_oob_page.dart';
 import 'package:mandiri_wth/utils/size_config.dart';
 
 class LoginPage extends StatefulWidget {
@@ -58,7 +57,10 @@ class _LoginPageState extends State<LoginPage> {
                           left: SizeConfig.blockSizeHorizontal * 10,
                           right: SizeConfig.blockSizeHorizontal * 10,
                         ),
-                        child: TextFormField(
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             labelText: 'Email',
@@ -66,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                               color: Colors.white,
                             ),
                             counterText: "",
+                            focusColor: Colors.white,
                           ),
                         ),
                       ),
@@ -75,7 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                           left: SizeConfig.blockSizeHorizontal * 10,
                           right: SizeConfig.blockSizeHorizontal * 10,
                         ),
-                        child: TextFormField(
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                           obscureText: true,
                           decoration: InputDecoration(
                             labelText: 'Password',
@@ -83,6 +89,11 @@ class _LoginPageState extends State<LoginPage> {
                               color: Colors.white,
                             ),
                             counterText: "",
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ),

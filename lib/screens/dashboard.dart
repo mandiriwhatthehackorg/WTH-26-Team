@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:mandiri_wth/screens/account_page.dart';
 import 'package:mandiri_wth/screens/cs_page.dart';
 import 'package:mandiri_wth/screens/home_page.dart';
+import 'package:mandiri_wth/screens/login_page.dart';
 import 'package:mandiri_wth/stores/customer.dart';
 import 'package:mandiri_wth/utils/size_config.dart';
 import 'package:provider/provider.dart';
@@ -87,10 +88,20 @@ class _DashboardPageState extends State<DashboardPage> {
       context: context,
       builder: (_) {
         return AlertDialog(
-          title: Text("Quit App?"),
+          title: Text(
+            "Quit App?",
+            style: TextStyle(
+              color: Color(0xff003d79),
+            ),
+          ),
           actions: <Widget>[
             FlatButton(
-              child: Text("CANCEL"),
+              child: Text(
+                "CANCEL",
+                style: TextStyle(
+                  color: Color(0xff003d79),
+                ),
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -98,16 +109,20 @@ class _DashboardPageState extends State<DashboardPage> {
             RaisedButton(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24)),
-              color: Colors.orange,
+              color: Color(0xffffb700),
               child: Text(
-                "YA",
+                "YES",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
               ),
               onPressed: () {
-                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (_) => LoginPage(),
+                  ),
+                );
               },
             ),
           ],

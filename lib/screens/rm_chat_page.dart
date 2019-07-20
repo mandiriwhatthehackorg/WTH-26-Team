@@ -4,6 +4,10 @@ import 'package:mandiri_wth/screens/video_call_page.dart';
 import 'package:mandiri_wth/utils/size_config.dart';
 
 class RmChatPage extends StatefulWidget {
+  final String name;
+
+  RmChatPage(this.name);
+
   @override
   _RmChatPageState createState() => _RmChatPageState();
 }
@@ -14,13 +18,20 @@ class _RmChatPageState extends State<RmChatPage> {
     SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xffffb700),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.call),
+            icon: Icon(
+              Icons.call,
+              color: Color(0xff003d79),
+            ),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.videocam),
+            icon: Icon(
+              Icons.videocam,
+              color: Color(0xff003d79),
+            ),
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -61,7 +72,7 @@ class _RmChatPageState extends State<RmChatPage> {
                   children: <Widget>[
                     Container(
                       child: Text(
-                        'Barbara Bonansea',
+                        widget.name,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           color: Color(0xff003d79),
@@ -90,8 +101,7 @@ class _RmChatPageState extends State<RmChatPage> {
       body: Column(
         children: <Widget>[
           Expanded(
-            child: Container(
-            ),
+            child: Container(),
           ),
           Container(
             color: Color(0xffffb700),

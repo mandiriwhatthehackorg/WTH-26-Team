@@ -98,7 +98,7 @@ class _RmConsultationPageState extends State<RmConsultationPage> {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (_) => RmChatPage(),
+              builder: (_) => RmChatPage(title),
             ),
           );
         },
