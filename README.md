@@ -1,16 +1,40 @@
-# mandiri_wth
+# Mandiri Private & Priority App
 
-A new Flutter application.
+We are using Open API provided by Bank Mandiri.
 
-## Getting Started
+## Build App
+This app required generated code. Here is the command:
+```
+flutter packages get
+flutter packages run build_runner build
+flutter run
+```
 
-This project is a starting point for a Flutter application.
+## Libs Dependencies
+* [mobx]
+* [flutter_mobx]
+* [provider]
+* [chopper]
+* [cached_network_image]
+* [mobx_codegen]
+* [build_runner]
 
-A few resources to get you started if this is your first Flutter project:
+## Repository Created & Maintained By
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Fikri Razzaq
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Flutter Enthusiast, #Android Developer.
+
+<a href="https://medium.com/@fikrirazzaq"><img src="https://github.com/aritraroy/social-icons/blob/master/medium-icon.png?raw=true" width="60"></a>
+<a href="https://twitter.com/fikrirazzaq"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
+<a href="https://linkedin.com/in/fikrirazzaq"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
+
+[mobx]: <https://pub.dev/packages/mobx>
+[flutter_mobx]: <https://pub.dev/packages/flutter_mobx>
+[provider]: <https://pub.dev/packages/provider>
+[chopper]: <https://pub.dev/packages/chopper>
+[cached_network_image]: <https://pub.dev/packages/cached_network_image>
+[fluttertoast]: <https://pub.dev/packages/fluttertoast>
+[mobx_codegen]: <https://pub.dev/packages/mobx_codegen>
+[build_runner]: <https://pub.dev/packages/build_runner>
+[git-karma]: <http://karma-runner.github.io/4.0/dev/git-commit-msg.html>
