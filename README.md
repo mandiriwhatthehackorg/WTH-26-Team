@@ -1,6 +1,6 @@
 # Mandiri Private & Priority App
 
-We are using Open API provided by Bank Mandiri. Fully writter using Flutter. :heart:
+We are using Open API provided by Bank Mandiri. Fully written using Flutter. :heart:
 
 ## Build App
 This app required generated code. Here is the command:
@@ -18,6 +18,7 @@ flutter run
 * [cached_network_image]
 * [mobx_codegen]
 * [build_runner]
+* [agora]
 
 ## Repository Created & Maintained By
 
@@ -38,3 +39,4 @@ flutter run
 [mobx_codegen]: <https://pub.dev/packages/mobx_codegen>
 [build_runner]: <https://pub.dev/packages/build_runner>
 [git-karma]: <http://karma-runner.github.io/4.0/dev/git-commit-msg.html>
+[agora]: <https://github.com/AgoraIO-Community/Agora-Flutter-Quickstart>
