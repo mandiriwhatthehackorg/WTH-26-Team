@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mandiri_wth/screens/book_meeting_page.dart';
+import 'package:mandiri_wth/screens/market_update_page.dart';
+import 'package:mandiri_wth/screens/rm_consultation_page.dart';
 import 'package:mandiri_wth/utils/size_config.dart';
 
 class PrivatePriorityPage extends StatefulWidget {
@@ -30,7 +33,17 @@ class _PrivatePriorityPageState extends State<PrivatePriorityPage> {
                     Icons.arrow_back,
                     color: Colors.white,
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  }),
+            ),
+            Container(
+              alignment: Alignment.topCenter,
+              margin: EdgeInsets.only(top: 36),
+              child: Image.asset(
+                'images/logo_white.png',
+                width: SizeConfig.blockSizeHorizontal * 20,
+              ),
             ),
             Container(
               margin: EdgeInsets.only(top: 72),
@@ -38,20 +51,21 @@ class _PrivatePriorityPageState extends State<PrivatePriorityPage> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(bottom: 32),
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.only(bottom: 32, left: 45),
                     child: Text(
-                      'Private and Priority',
+                      'Private and\nPriority',
                       style: TextStyle(
-                        fontSize: 28,
+                        fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: Color(0xff003d79),
                       ),
                     ),
                   ),
-                  _menuCard('images/ic_debit.png', "Booking Meeting\nRoom"),
-                  _menuCard('images/ic_debit.png', "Market Update"),
-                  _menuCard('images/ic_debit.png',
-                      "Consultation with\nRetail Manager"),
+                  _menuCard('images/ic_calendar.png', "Booking Meeting\nRoom"),
+                  _menuCard('images/ic_market.png', "Market Update"),
+                  _menuCard('images/ic_cs.png',
+                      "Consultation with\nRelationship Manager"),
                 ],
               ),
             )
@@ -63,17 +77,41 @@ class _PrivatePriorityPageState extends State<PrivatePriorityPage> {
 
   Widget _menuCard(String image, String title) {
     return Container(
-      margin: EdgeInsets.only(top: 16),
-      width: SizeConfig.blockSizeHorizontal * 60,
-      child: Card(
+      margin: EdgeInsets.only(top: 20),
+      width: SizeConfig.blockSizeHorizontal * 75,
+      child: MaterialButton(
+        onPressed: () {
+          if (title.contains("Room")) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => BookMeetingPage(),
+              ),
+            );
+          } else if (title.contains("Market")) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => MarketUpdatePage(),
+              ),
+            );
+          } else {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => RmConsultationPage(),
+              ),
+            );
+          }
+        },
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         color: Colors.white.withOpacity(0.75),
         child: Container(
           margin: EdgeInsets.all(20),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Container(
+                width: SizeConfig.blockSizeHorizontal * 15,
+                height: SizeConfig.blockSizeHorizontal * 15,
                 child: Image.asset(
                   image,
                 ),
