@@ -1,6 +1,6 @@
 # Mandiri Private & Priority App
 
-We are using Open API provided by Bank Mandiri.
+We are using Open API provided by Bank Mandiri. Fully writter using Flutter. :heart:
 
 ## Build App
 This app required generated code. Here is the command:
